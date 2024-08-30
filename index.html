@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文化祭クラス紹介</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .grade-selection {
+            margin: 20px 0;
+        }
+        .class-list {
+            display: none;
+        }
+        .class-list.active {
+            display: block;
+        }
+        .class-item {
+            margin-bottom: 20px;
+        }
+        .class-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        .class-item h3 {
+            margin-top: 10px;
+        }
+        .class-item p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>文化祭クラス紹介</h1>
+
+    <div class="grade-selection">
+        <label for="grade-select">学年を選択:</label>
+        <select id="grade-select" onchange="showClasses()">
+            <option value="">--選択してください--</option>
+            <option value="grade-1">1年生</option>
+            <option value="grade-2">2年生</option>
+            <option value="grade-3">3年生</option>
+        </select>
+    </div>
+
+    <div id="grade-1" class="class-list">
+        <div class="class-item">
+            <img src="class1-photo.jpg" alt="1年1組の写真">
+            <h3>1年1組 - カフェ</h3>
+            <p>本格的なコーヒーとスイーツを提供します。</p>
+        </div>
+        <div class="class-item">
+            <img src="class2-photo.jpg" alt="1年2組の写真">
+            <h3>1年2組 - お化け屋敷</h3>
+            <p>怖がらせる準備は万端！勇気のある方は是非挑戦してください。</p>
+        </div>
+    </div>
+
+    <div id="grade-2" class="class-list">
+        <div class="class-item">
+            <img src="class3-photo.jpg" alt="2年1組の写真">
+            <h3>2年1組 - 屋台</h3>
+            <p>たこ焼き、焼きそば、かき氷など、多彩なメニューをご用意。</p>
+        </div>
+        <div class="class-item">
+            <img src="class4-photo.jpg" alt="2年2組の写真">
+            <h3>2年2組 - 演劇</h3>
+            <p>感動のストーリーをお届けします。お見逃しなく！</p>
+        </div>
+    </div>
+
+    <div id="grade-3" class="class-list">
+        <div class="class-item">
+            <img src="class5-photo.jpg" alt="3年1組の写真">
+            <h3>3年1組 - フォトブース</h3>
+            <p>思い出を写真に残しましょう！</p>
+        </div>
+        <div class="class-item">
+            <img src="class6-photo.jpg" alt="3年2組の写真">
+            <h3>3年2組 - 映画上映</h3>
+            <p>学生が制作した短編映画を上映します。</p>
+        </div>
+    </div>
+
+    <script>
+        function showClasses() {
+            var grade = document.getElementById("grade-select").value;
+            var classLists = document.getElementsByClassName("class-list");
+            for (var i = 0; i < classLists.length; i++) {
+                classLists[i].classList.remove("active");
+            }
+            if (grade) {
+                document.getElementById(grade).classList.add("active");
+            }
+        }
+    </script>
+
+</body>
+</html>
