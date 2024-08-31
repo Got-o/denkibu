@@ -1,82 +1,133 @@
-header{
-  font-family:"MS Pゴシック",sans-serif;    
+/*タブ切り替え全体のスタイル*/
+.tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 480px;
+    margin: 0 auto;}
+  
+  /*タブのスタイル*/
+  .tab_item {
+    width: calc(100%/3);
+    height: 50px;
+    border-bottom: 3px solid #5ab4bd;
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
   }
-    .tabs {
-      margin-top: 50px;
-      padding-bottom: 40px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      width: 95%;
-      margin: 0 auto;}
-    .tab_item {
-      width: calc(100%/3);
-      height: 50px;
-      border-bottom: 3px solid #2ea8e6;
-      background-color: #d9d9d9;
-      line-height: 50px;
-      font-size: 16px;
-      text-align: center;
-      color: #565656;
-      display: block;
-      float: left;
-      text-align: center;
-      font-weight: bold;
-      transition: all 0.2s ease;
-    }
-    .tab_item:hover {
-      opacity: 0.75;
-    }
-    input[name="tab_item"] {
-      display: none;
-    }
-    .tab_content {
-      display: none;
-      padding: 40px 40px 0;
-      clear: both;
-      overflow: hidden;
-    }
-    #all:checked ~ #all_content,
+  .tab_item:hover {
+    opacity: 0.75;
+  }
+  
+  /*ラジオボタンを全て消す*/
+  input[name="tab_item"] {
+    display: none;
+  }
+  
+  /*タブ切り替えの中身のスタイル*/
+  .tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+  }
+  
+  
+  /*選択されているタブのコンテンツのみを表示*/
+  #all:checked ~ #all_content,
   #programming:checked ~ #programming_content,
   #design:checked ~ #design_content {
     display: block;
   }
+  
+  /*選択されているタブのスタイルを変える*/
   .tabs input:checked + .tab_item {
-      background-color: #2ea8e6;
-      color: #fff;
-    }
-    main{
-      margin-top: 50px;
-      padding-bottom: 40px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      width: 480px;
-      margin: 0 auto;}
-      html {
-          scroll-behavior: smooth;
-        }
-  .before{
-      padding: 10px;
-      border: 1px solid #333;
-      text-align: center;
+    background-color: #5ab4bd;
+    color: #fff;
+  }
+  .l-wrapper_02 {
+    margin: 1rem auto;
+    width: 380px;
+  }
+  .card-radius_02{
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
+  }
+  
+  .card_02 {
+    background-color: #fff;
+    box-shadow: 0 0 0px rgba(0, 0, 0, .16);
+    color: #212121;
+    text-decoration: none;
+  }
+  
+  .card__header_02 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card__title_02 {
+    padding: 1rem 1.5rem 0;
+    font-size: 1.6rem;
+    order: 1;
+    font-weight: bold;
+    text-decoration: none;
+    /*線の種類（実線） 太さ 色*/
+    border-bottom: solid 3px black;
+  
+  }
+  
+  .card__thumbnail_02 {
+    margin: 0;
+    order: 0;
+  }
+  
+  .card__image_02 {
+    width: 100%;
+  }
+  
+  .card__body_02 {
+    padding: 0 1.5rem;
+  }
+  
+  .card__text_02 {
+    font-size: .8rem;
+    text-align:center;
+    text-decoration: none;
+  }
+  
+  .card__text2_02 {
+    font-size: .8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
   }
   footer{
-      background-color: #565656;
-      a{
-      font-size: 20px;
-        color: #e09191;
+    background-color: #565656;
+    a{
+    font-size: 20px;
+      color: #e09191;
+      display: flex;
+      margin-right: 15px;
+      justify-content: flex-end;
+    }
+    p{
+        font-size: 20px;
+        color: #b4b4b4;
         display: flex;
         margin-right: 15px;
         justify-content: flex-end;
-      }
-      p{
-          font-size: 20px;
-          color: #b4b4b4;
-          display: flex;
-          margin-right: 15px;
-          justify-content: flex-end;
-      }
-  
-  header{flex-grow: 0;
+    }
+    } 
+    header{flex-grow: 0;
       background-color: #992121;
       h1{
       font-size: 30px;
@@ -96,5 +147,3 @@ header{
   
   
   }
-  }
-  
