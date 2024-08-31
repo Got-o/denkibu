@@ -2,6 +2,7 @@ header{
   font-family:"MS Pゴシック",sans-serif;    
   }
     .tabs {
+      clear:both
       margin-top: 50px;
       padding-bottom: 40px;
       background-color: #fff;
